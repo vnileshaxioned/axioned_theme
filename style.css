@@ -1,0 +1,1116 @@
+/*
+Theme Name: Axioned Theme
+Theme URI: https://wordpresstest.com/
+Author: Nilesh V
+Author URI: https://wordpresstest.com/
+Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis excepturi inventore odio sed magnam quas, in enim assumenda asperiores modi voluptate explicabo libero, labore exercitationem consequuntur porro facere eum!
+Fuga eligendi ducimus repellat dignissimos dolores quaerat possimus praesentium a. Cum ipsa dolorum iste aut ipsum in voluptatem minima dolore tenetur. Autem laudantium possimus ea, officiis reprehenderit nisi nulla facere.
+Voluptas sit aspernatur quibusdam? Iure, expedita tempore quasi cum esse alias mollitia vero ab quas veniam vel, rerum debitis beatae corrupti reiciendis adipisci illo voluptatem ad tempora deserunt ipsum. Necessitatibus?
+Quas quisquam sint commodi beatae distinctio vero a, eaque qui, culpa, exercitationem maxime optio iusto corrupti soluta illo voluptatibus dolores inventore nemo explicabo vel asperiores repudiandae et id. Ratione, porro?
+Tested up to: 6.0
+Requires PHP: 5.6
+Version: 1.0
+Text Domain: axionedtheme
+Tags: custom-theme, wordpress-test, custom-logo, editor-style, featured-images, full-site-editing
+*/
+
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 88.6%; 
+  margin: 0 auto;
+}
+/*=================================
+  Custom styling starts here
+=================================*/
+:root {
+  --background-color: #201547;
+  --white-color: #fff;
+  --black-color: #000;
+  --pink-color: #E31C79;
+  --green-color: #0b890b;
+  --red-color: #bd0000;
+  --green-hover: #206020;
+  --red-hover: #851a1a;
+}
+
+body {
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+a { color: var(--white-color); }
+
+.wrapper.home-wrapper {
+  width: 97%;
+  position: relative;
+}
+
+.container { position: relative; }
+
+.main-heading {
+  margin: 69px 8.7% 4px;
+  display: inline-block;
+  background-color: var(--pink-color);
+  color: var(--background-color);
+  font-size: 35px;
+  font-weight: bold;
+  line-height: .8;
+  text-transform: capitalize;
+}
+
+.inner-wrapper {
+  width: 97%;
+  position: relative;
+  background-color: var(--white-color);
+}
+
+main { margin-top: 146px; }
+/*=================================
+  Custom styling ends here
+=================================*/
+
+/*=================================
+  Header styling starts here
+=================================*/
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: var(--background-color);
+}
+
+header .wrapper {
+  padding: 42px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.axioned-logo-img { width: 50%; }
+.axioned-logo { font-size: 0; }
+.menu { flex-basis: 52%; }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item a {
+  font-size: 22px;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/* home page styling started here */
+/* banner section started here */
+.banner { margin-top: 110px; }
+
+.banner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.banner-content h2 {
+  margin: 9px 0;
+  display: inline-block;
+  background-color: var(--background-color);
+  color: #fff;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: .8;
+}
+
+.pink-color { color: var(--pink-color); }
+/* banner section ended here */
+
+/* work section started here */
+.outter-box {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-box { position: relative; }
+.work-link { display: block; }
+
+.work-image {
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.inner-box .content {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 6%;
+}
+
+.work-heading {
+  color: var(--pink-color);
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.work-paragraph {
+  margin: 10px 0;
+  font-size: 16px;
+}
+/* work section ended here */
+
+/* client testimonial section started here */
+.client-testimonials .inner-wrapper { padding: 0 0 33px; }
+
+.client-outter-box {
+  width: 90%;
+  padding: 46px 0 50px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.client-inner-box {
+  padding: 33px;
+  margin-left: 5%;
+  background-color: #fff;
+  box-shadow: 0 0 10px #0000001f;
+  flex-basis: 35.2%;
+  transition: all .3s ease;
+}
+
+.client-inner-box:nth-child(2n) { margin-right: 5%; }
+
+.client-inner-box figure {
+  width: 52%;
+  margin: 0 auto;
+}
+
+.client-testimonials .content { margin-top: 44px; }
+
+.client-heading {
+  color: var(--background-color);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.client-paragraph {
+  margin: 34px 0 8px 0;
+  color: #706989;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.client-slider-action {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.client-slider-action:last-child {
+  left: auto;
+  right: 0;
+}
+
+.client-slider-button {
+  color: var(--background-color);
+  text-indent: -9999px;
+  transition: all .3s ease;
+}
+
+.client-slider-button::before {
+  font-family: 'FontAwesome';
+  font-size: 56px;
+  float: right;
+  text-indent: 0;
+}
+
+.previous-slide::before { content: '\f104'; }
+.next-slide::before { content: '\f105'; }
+/* client testimonial section ended here */
+/* home page styling ended here */
+
+/* work page styling started here */
+/* our work section started here */
+.works .wrapper { padding-bottom: 0; }
+.works .main-heading { margin: 68px 6% 0; }
+.tag-list .tag-active { color: #000; }
+
+.work-tag {
+  color: gray;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.filter-search {
+  margin: 10px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all-tags { flex-basis: 70%; }
+.tag-list { margin-right: 2%; }
+
+.our-work {
+  margin: 43px 6% 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.work-list {
+  margin: 0 13px 15px 0;
+  position: relative;
+  flex-basis: 32.4%;
+}
+
+.work-list:nth-child(3n) { margin-right: 0; }
+
+.work-list a {
+  height: 370px;
+  font-size: 0;
+}
+
+.work-list figure { height: 100%; }
+
+.work-list img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-list .content {
+  width: 70%;
+  position: absolute;
+  bottom: 20px;
+  left: 9%;
+}
+
+.work-list .work-heading {
+  color: var(--background-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.work-list .work-paragraph {
+  margin-top: 4px;
+  color: var(--background-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.main-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content-image,
+.main-left-content {
+    flex-basis: 40%;
+}
+/* our work section started here */
+
+/* slider section started here */
+.client-slider {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  padding: 0 13px;
+  flex-basis: 16.7%;
+}
+
+.client-slider .client-slider-action { left: 12%; }
+
+.client-slider .client-slider-action:last-child {
+  right: 12%;
+  left: initial;
+}
+
+.next-button,
+.previous-button {
+  color: var(--background-color);
+  text-indent: -9999px;
+}
+
+.next-button::before,
+.previous-button::before {
+  font-family: 'FontAwesome';
+  font-size: 56px;
+  float: right;
+  text-indent: 0;
+}
+
+.previous-button::before { content: '\f104'; }
+.next-button::before { content: '\f105'; }
+/* slider section end */
+/* work page styling ended here */
+
+/* contact page started here*/
+/* contact us section started here */
+.contact-us .main-heading { margin: 54px 5% 36px; }
+
+.contact-outter-box {
+  padding-bottom: 60px;
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-content {
+  padding: 26px 5%;
+  color: var(--background-color);
+}
+
+.contact-head {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.contact-address {
+  margin: 14px 2% 0;
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 1.5;
+  transition: all .3s ease;
+}
+
+.tel-number a {
+  margin: 12px 2% 0;
+  color: var(--background-color);
+  transition: all .3s ease;
+}
+
+.contact-list {
+  box-shadow: 0 0 10px #0000001f;
+  flex-basis: 31.3%;
+}
+/* contact us section ended here */
+
+/* contact form section started here */
+.contact-form .main-heading {
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+}
+
+.wpcf7 {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.wpcf7 p { padding-top: 10px; }
+
+.wpcf7-form-control {
+  width: 98%;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+.wpcf7-select { width: 100%; }
+
+.wpcf7-submit {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--background-color);
+  color: #fff;
+  transition: all .3s ease;
+}
+/* contact form section ended here */
+
+/* lets chat section started here */
+.lets-chat .inner-wrapper { background-color: #F5F5F5; }
+.lets-chat .main-heading { margin: 54px 5% 36px; }
+
+.chat-list {
+  margin-top: 10px;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  box-shadow: 0 0 10px #0000001f;
+  flex-basis: 31.3%;
+  justify-content: flex-start;
+}
+
+.chat-list a {
+  width: 100%;
+  display: flex;
+}
+
+.chat-list figure {
+  max-height: 100%;
+  flex-basis: 29%;
+}
+
+.chat-list img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-content {
+  padding: 18px 3%;
+  color: var(--background-color);
+  flex-basis: 62%;
+}
+
+.chat-head {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.chat-position {
+  padding: 10px 0;
+  font-size: 17px;
+}
+
+.chat-link-text {
+  font-size: 17px;
+  transition: all .3s ease;
+}
+
+.chat-link {
+  display: flex;
+  color: var(--background-color);
+  align-items: flex-end;
+}
+
+.chat-link figure {
+  margin-right: 3%;
+  flex-basis: 8%;
+}
+
+.chat-link img { width: 18px; }
+/* lets chat section ended here */
+
+/* hiring section started here */
+.hiring .wysiwyg-editor { margin: 0; }
+
+.hiring h6 {
+  padding: 44px 0;
+  color: var(--background-color);
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+}
+/* hiring section started here */
+/* contact page ended here */
+
+/* services page started here */
+/* service section started here */
+.tools .inner-wrapper,
+.capabilities .inner-wrapper {
+  background-color: #F5F5F5;
+}
+
+.tools .main-heading,
+.team_axioned .main-heading,
+.capabilities .main-heading {
+  margin: 67px 9.8% 0;
+}
+
+.work-outter-box,
+.service-outter-box {
+  width: 80.6%;
+  padding-top: 42px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.work-outter-box .right,
+.service-outter-box .right {
+  flex-direction: row-reverse;
+}
+
+.our-work .work-list { padding-bottom: 0; }
+
+.work-list,
+.service-list {
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work-img,
+.service-img {
+  flex-basis: 46.8%;
+}
+
+.work-content,
+.service-content {
+  flex-basis: 46.8%;
+}
+
+.work-title,
+.service-title {
+  margin: 4px 0 27px;
+  display: inline-block;
+  background-color: var(--pink-color);
+  color: var(--background-color);
+  font-size: 26px;
+  font-weight: bold;
+  line-height: .8;
+  text-transform: capitalize;
+}
+
+.service-paragraph {
+  color: #272047;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+/* service section ended here */
+
+/* team axioned section started here */
+.team-outter-box {
+  padding: 44px 0 60px;
+  margin: 0 9.7%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-list {
+  box-shadow: 0 0 10px #0000001f;
+  flex-basis: 31.3%;
+}
+
+.team-content {
+  padding: 22px 26px;
+  color: var(--background-color);
+}
+
+.team-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.team-paragraph {
+  margin-top: 22px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.team-content-box { margin-top: 6px; }
+
+.team-content-list {
+  padding: 2px 0;
+  margin-left: 18px;
+  display: list-item;
+  font-size: 18px;
+  line-height: 1.5;
+  list-style: disc;
+}
+/* team axioned section ended here */
+
+/* tools section started here */
+.tools-outter-box {
+  margin: 26px 9.7% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-name {
+  padding: 13px;
+  color: gray;
+  font-size: 22px;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.tools-image-box { margin: 0 9.7%; }
+
+.tools-image-box {
+  padding-bottom: 30px;
+  margin: 0 9.7%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tools-image-list {
+  margin-right: 33px;
+  flex-basis: 13.3%;
+}
+
+.image-list { transition: all .3s ease; }
+/* tools section ended here */
+/* services page ended here */
+
+/* about page started here */
+/* about section started here */
+.about-content .main-heading,
+.global-content .main-heading {
+  margin: 0;
+}
+
+.section-background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.section-background-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  width: 40%;
+  padding: 90px 9.7% 83px;
+  transform: translate(0);
+}
+
+.wysiwyg-editor { margin-top: 26px; }
+
+.wysiwyg-editor p {
+  margin: 16px 0;
+  font-size: 16px;
+  letter-spacing: .7px;
+  line-height: 1.6;
+}
+/* about section ended here */
+
+/* global team section started here */
+.global-content {
+  width: 80%;
+  padding: 63px 9.7% 60px;
+  transform: translate(0);
+}
+
+.global-inner-content {
+  margin-top: 43px;
+  display: flex;
+}
+
+.global-list {  
+  padding: 35px 2.8% 28px;
+  margin-right: 2.7%;
+  background-color: #fff;
+  flex-basis: 25.2%;
+}
+
+.global-list:last-child { margin-right: 0; }
+.global-list figure { width: 48px; }
+
+.global-list p {
+  margin: 24px 0;
+  color: var(--background-color);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.global-list p span { font-size: 18px; }
+.global-list-content { margin-left: 16px; }
+
+.global-inner-list {
+  padding-bottom: 13px;
+  display: list-item;
+  color: var(--background-color);
+  font-size: 16px;
+  list-style-type: disc;
+}
+
+.global-inner-list span { margin-left: 4%; }
+/* global team section ended here */
+
+/* client testimonial section started here */
+.client-content {
+  width: 97.5%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  transform: translate(0);
+}
+
+.client-content .main-heading { margin-top: 79px; }
+.client-content .client-outter-box { padding-bottom: 32px; }
+/* client testimonial section ended here */
+/* about page ended here */
+
+/* todo page started here */
+.todo-form {
+  padding: 20px 0;
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group { flex-basis: 80%; }
+.save-button { flex-basis: 12%; }
+
+.form-content {
+  padding: 10px;
+  width: 95%;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: var(--green-color);
+  border: none;
+  color: var(--white-color);
+  outline: none;
+  border-radius: 5px;
+}
+
+.todo-task {
+  padding: 10px 0 40px;
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px var(--black-color);
+}
+
+.task-name {
+  flex-basis: 70%;
+  padding: 10px;
+}
+
+.action-button {
+  flex-basis: 21%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-task {
+  background-color: var(--green-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.delete-task {
+  background-color: var(--red-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* todo page ended here */
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer .wrapper {
+  padding: 80px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-links {
+  margin: 25px 0 27px;
+  display: flex;
+  align-items: center;
+}
+
+.social-icons { margin-right: 14px; }
+
+.icon {
+  padding: 4px 13px;
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--white-color);
+  color: var(--background-color);
+  text-indent: -9999px;
+}
+
+.icon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'Font Awesome 5 Brands';
+  float: right;
+  text-indent: 0;
+  transform: translate(-50%,-50%);
+}
+
+.social-icons:nth-child(1) .icon::before { content: '\f16d'; }
+.social-icons:nth-child(2) .icon::before { content: '\f099'; }
+.social-icons:nth-child(3) .icon::before { content: '\f0e1'; }
+
+.footer-head {
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: capitalize;
+  transition: all .3s ease;
+}
+
+.newsletter-signup {
+  padding: 9px 11%;
+  margin-top: 25px;
+  background-color: var(--white-color);
+  color: var(--background-color);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.left-footer { flex-basis: 23%; }
+.right-footer { flex-basis: 52.5%; }
+
+.site-info {
+  margin: 21px 0 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.site-health {
+  padding: 6px 8px;
+  margin-left: 25px;
+  background-color: var(--pink-color);
+  font-size: 14px;
+}
+
+.agency-partner {
+  padding-right: 10px;
+  border-right: 2px solid #fff;
+  flex-basis: 20.5%;
+}
+
+.site-health {
+  padding: 4px 12px 6px 10px;
+  margin-left: 10px;
+  display: flex;
+  background-color: var(--pink-color);
+  font-size: 14px;
+  align-items: center;
+  transition: all .3s ease;
+}
+
+.gear-icon {
+  width: 36px;
+  margin-left: 6px;
+}
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for hover starts here*/
+@media only screen and (min-width: 995px) {
+  .footer-head:hover,
+  .menu-item a:hover {
+    color: gray;
+  }
+
+  .icon:hover { background-color: gray; }
+  .site-health:hover { background-color: #c9005e; }
+  .client-content .client-slider-button:hover { color: #fff; }
+  .client-inner-box:hover { transform: translateY(-10px); }
+  .image-list:hover { transform: scale(1.5); }
+  .delete-task:hover { background-color: var(--red-hover); }
+  .wpcf7-submit:hover { background-color: var(--black-color); }
+
+  .edit-task:hover,
+  .submit-button:hover {
+    background-color: var(--green-hover);
+  }
+
+  .work-tag:hover,
+  .list-name:hover {
+    color: #000;
+  }
+
+  .contact-address:hover,
+  .tel-number a:hover,
+  .chat-link-text:hover {
+    color: #E31C79;
+  }
+}
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+  .banner-content { top: 33.5%; }
+  .banner-content h2 { font-size: 48px; }
+  .banner .inner-wrapper { height: 578px; }
+  li.client-inner-box:nth-child(2) { margin-left: .7%; }
+  .work-list { margin-right: 1.2%; }
+  .work-list a { height: 270px; }
+  .work-list .work-heading { font-size: 24px; }
+  .work-list .work-paragraph { font-size: 14px; }
+  .main-heading { font-size: 32px; }
+  .team-content { padding: 22px 20px; }
+  .team-title { font-size: 22px; }
+
+  .team-content-list,
+  .team-paragraph {
+    font-size: 14px;
+  }
+
+  .tools-image-box { justify-content: center; }
+
+  .contact-outter-box {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .chat-list { flex-basis: 46.3%; }
+  .contact-content { padding: 18px 5%; }
+
+  .contact-list {
+    flex-basis: 45.3%;
+    margin-bottom: 20px;
+  }
+
+  .contact-head { font-size: 26px; }
+
+  .tel-number a,
+  .contact-address {
+    margin: 6px 2% 0;
+    font-size: 14px;
+  }
+}
+
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .work-list {
+    margin-right: 1.2%;
+    flex-basis: 48.5%;
+  }
+
+  .work-list:nth-child(3n) { margin-right: 1.2%; }
+  .work-list:nth-child(2n) { margin-right: 0; }
+}
